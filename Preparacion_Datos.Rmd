@@ -353,6 +353,7 @@ Dado que en la verdadera tarea de predicción no se van a tener los datos actual
 
 # # guardar datos
 saveRDS(train_mensuales_completo,"Datos_clean/train_mensuales_completo.rds")
+write_csv(train_mensuales_completo,"Datos_clean/train_mensuales_completo.csv")
 
 train_mensuales_completo<-train_mensuales_completo%>%
   mutate(item_price_mean_art_l1=lag(item_price_mean_art),
